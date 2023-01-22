@@ -1,4 +1,4 @@
-nombre = input("¿Cuál es tu nombre?")
+nombre = input("¿Cuál es tu nombre? ")
 MAX = 25
 saludo = f"Hola, {nombre}"
 tam_texto = len(saludo)
