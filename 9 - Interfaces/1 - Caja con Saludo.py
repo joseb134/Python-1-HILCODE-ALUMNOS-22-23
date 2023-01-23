@@ -41,13 +41,20 @@ nombre = input("¿Cuál es tu nombre? ")
 MAX = 25
 saludo = f"Hola, {nombre}."
 tam_texto = len(saludo)
-espacios = MAX - tam_texto
-espacios = espacios//2
-texto_espacio = " "*espacios
+espacios_total = MAX - tam_texto
+espacios = espacios_total//2
+texto_espacio_izq = " "*espacios
+
+texto_espacio_der = ""
+
+if espacios_total%2 == 0:
+    texto_espacio_der = " "*(espacios-1)
+else:
+    texto_espacio_der = " "*espacios
 
 print(" ________________________")
 print("|                        |")
 print("|                        |")
-print(f"|{texto_espacio}{saludo}{texto_espacio}|")
+print(f"|{texto_espacio_izq}{saludo}{texto_espacio_der}|")
 print("|                        |")
 print("|________________________|")
