@@ -8,7 +8,7 @@ La mensaje final tiene que estar centralizada en la caja tanto verticalmente com
 debe adaptarse a diferentes nombres y mantener su forma independiente de cuantos caracteres tenga el nombre
 desde que el nombre junto al saludo no resulten en un texto mayor que la longitud horizontal de la caja.
 
-Ejemplos de outputs validos:
+Ejemplos de outputs válidos:
 
 1)
  ______________________________
@@ -43,14 +43,13 @@ saludo = f"Hola, {nombre}."
 tam_texto = len(saludo)
 espacios_total = MAX - tam_texto
 espacios = espacios_total//2
-texto_espacio_izq = " "*espacios
 
-texto_espacio_der = ""
+texto_espacio_izq = " "*espacios
+texto_espacio_der = " "*espacios
 
 if espacios_total%2 == 0:
     texto_espacio_der = " "*(espacios-1)
-else:
-    texto_espacio_der = " "*espacios
+
 
 print(" ________________________")
 print("|                        |")
