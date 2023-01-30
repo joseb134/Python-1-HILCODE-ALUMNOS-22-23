@@ -6,3 +6,22 @@ Para hacerlo necesitaremos tener buen dominio sobre el uso de bucles, condiciona
 variables de tipo caracter. Se recomienda también el uso de variables para indicar
 las dimensiones de la caja (altura y longitud).
 '''
+
+MAX_HORIZONTAL = 25
+MAX_VERTICAL = 5
+
+nombre = input("¿Cuál es tu nombre? ")
+saludo = f"Hola, {nombre}."
+
+tam = len(saludo)
+espacios = (MAX_HORIZONTAL-tam)
+mitad = espacios//2
+
+linea_superior = MAX_HORIZONTAL*"_"
+
+print(linea_superior)
+
+
+
+
+
