@@ -17,11 +17,24 @@ tam = len(saludo)
 espacios = (MAX_HORIZONTAL-tam)
 mitad = espacios//2
 
-linea_superior = MAX_HORIZONTAL*"_"
+linea_superior = " " + MAX_HORIZONTAL*"_"
+linea_inferior = "|" + MAX_HORIZONTAL*"_" + "|"
+linea_vacia = "|" + MAX_HORIZONTAL*" " + "|"
+mensaje = "|" + mitad*" " + saludo + (mitad)*" " + "|"
 
-print(linea_superior)
+if espacios%2 == 1:
+    mensaje = "|" + mitad*" " + saludo + (mitad+1)*" " + "|"
 
-
-
+for linea in range(-1,MAX_VERTICAL):
+    if linea == -1:
+        print(linea_superior)
+    elif linea == MAX_VERTICAL - 1:
+        print(linea_inferior)
+    elif linea+1 == MAX_VERTICAL//2 and MAX_VERTICAL%2==0:
+        print(mensaje)
+    elif linea == MAX_VERTICAL//2 and MAX_VERTICAL%2==1:
+        print(mensaje)
+    else:
+        print(linea_vacia)
 
 
