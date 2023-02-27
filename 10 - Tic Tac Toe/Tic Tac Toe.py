@@ -28,7 +28,9 @@ def crearTabla(posiciones):
     """
     return tabla
 
-
+# la función pregunta() pide que los jugadores introduzcan por teclado el simbolo que quiere usar en el juego (X u O)
+# si algún jugador escribe un valor inválido (algo diferente de X, x, O, o) el código pide otro valor
+# la función debe pedir valores de manera continua hasta que un valor válido sea introducido
 def pregunta():
     jugador_1 = input("¿Que eliges, la 'X' o la 'O'? ")
     jugador_1 = jugador_1.upper() # jugador_1.lower() --> pasa toda una string a minusculas
@@ -48,6 +50,16 @@ def pregunta():
 
     return jugador_1, jugador_2
 
+def jugada(posiciones, jugador):
+    casilla = int(input("¿Dónde quieres jugar? Elija un número entre 1 y 9. "))
+    while not(casilla >= 1 and casilla <= 9 and posiciones[casilla] == " "):
+        if casilla < 1 or casilla > 9:
+            print("VALOR INVALIDO!!\nIndique un número entre 1 y 9. ")
+        elif posiciones[casilla] != " ":
+            print("VALOR INVALIDO!!\nIndique una posición vacía. ")
+        casilla = int(input("¿Dónde quieres jugar? Elija un número entre 1 y 9. "))
+    posiciones[casilla] = jugador
+    return posiciones
 
 posiciones = limpiarTabla()
 tabla = crearTabla(posiciones)
@@ -57,12 +69,8 @@ jugador_1, jugador_2 = pregunta()
 print("JUGADOR 1: ", jugador_1)
 print("JUGADOR 2: ", jugador_2)
 
+posiciones = jugada(posiciones, jugador_1)
+print(crearTabla(posiciones))
 
-
-
-
-
-
-
-
-
+posiciones = jugada(posiciones, jugador_2)
+print(crearTabla(posiciones))
