@@ -28,8 +28,41 @@ def crearTabla(posiciones):
     """
     return tabla
 
+
+def pregunta():
+    jugador_1 = input("¿Que eliges, la 'X' o la 'O'? ")
+    jugador_1 = jugador_1.upper() # jugador_1.lower() --> pasa toda una string a minusculas
+
+    while jugador_1 != "O" and jugador_1 != "X":
+        print("INVALIDO.\n¿'X' o 'O'? ")
+        jugador_1 = input("¿Que eliges, la 'X' o la 'O'? ")
+        jugador_1 = jugador_1.upper()
+
+    if jugador_1 == "X":
+        print("Jugador 1 ha elegido la X.")
+        jugador_2 = "O"
+
+    elif jugador_1 == "O":
+        print("Jugador 1 ha elegido la O.")
+        jugador_2 = "X"
+
+    return jugador_1, jugador_2
+
+
 posiciones = limpiarTabla()
 tabla = crearTabla(posiciones)
-
 print(tabla)
+
+jugador_1, jugador_2 = pregunta()
+print("JUGADOR 1: ", jugador_1)
+print("JUGADOR 2: ", jugador_2)
+
+
+
+
+
+
+
+
+
 
