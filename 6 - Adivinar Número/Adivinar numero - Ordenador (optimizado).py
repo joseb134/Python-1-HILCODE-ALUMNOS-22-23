@@ -10,17 +10,17 @@ def input_numero(lim):
 def adivinar(lim, numero):
     lim_inferior = 0
     lim_superior = lim
-    ordenador = random.randint(0, lim)
+    ordenador = lim//2
     repeticiones = 0
     while ordenador != numero:
         print("El numero ", ordenador," no es correcto.")
         if ordenador > numero:
             lim_superior = ordenador
-            ordenador = random.randint(lim_inferior+1, lim_superior)
+            ordenador = (lim_superior+lim_inferior)//2
 
         elif ordenador < numero:
             lim_inferior = ordenador
-            ordenador = random.randint(lim_inferior+1, lim_superior)
+            ordenador = (lim_superior+lim_inferior)//2
 
         repeticiones = repeticiones + 1
     return ordenador, repeticiones
