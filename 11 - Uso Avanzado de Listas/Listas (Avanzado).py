@@ -103,12 +103,14 @@ print(mayor)
 print(menor)
 
 # bucles for anidados
+'''
 for i in range(0,5):
     for j in range(0,3):
         print("FOR J:", j)
     print("FOR I:", i)
-
+'''
 # ordenar los elementos de una lista en orden creciente sin usar comandos
+# numeros = [3,5,4,2,1]
 for i in range(0,len(numeros)):
     for j in range(0,len(numeros)):
         if numeros[i] < numeros[j]:
@@ -134,3 +136,26 @@ print(numeros)
 # comando .sort(reverse = True) -> pone los elementos de la lista en orden decreciente
 numeros.sort(reverse=True)
 print(numeros)
+
+# comando .index(x)
+numeros = [3,5,4,2,1]
+num = 5
+cantidad = numeros.count(num)
+if cantidad != 0:
+    indice = numeros.index(num)
+    print(f"El número {num} está en la posición",indice)
+else:
+    print(f"El número {num} no está en la lista")
+
+
+numeros = [3,5,4,2,1,9,8,7,1,3,0,5,8,7]
+nums = numeros[0:7]
+print(nums)
+
+nums = numeros[5:9]
+print(nums)
+
+
+
+
+
