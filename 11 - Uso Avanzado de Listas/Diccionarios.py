@@ -20,7 +20,7 @@ personas = {"nombre": nombre, "edad": edad, "hermanos": hermanos,
 
 print(personas["color"])
 '''
-
+'''
 ordenador_1 = {"procesador": "intel i7 7th Generacion", "RAM": "24 GB",
                 "GPU": "NVIDIA GEFORCE GTX 950M", "HD": 1000, "SSD": 128}
 
@@ -41,19 +41,20 @@ print(ordenadores["HD"])
 
 ordenador_1 = {"procesador": "intel i7 7th Generacion", "RAM": "24 GB",
                 "GPU": "NVIDIA GEFORCE GTX 950M", "HD": 1000, "SSD": 128}
-ordenador_1["pantalla"] = 16
+ordenador_1["pantalla"] = 1
 print(ordenador_1)
 ordenador_1["RAM"] = "32 GB"
 print(ordenador_1)
 ##################################################################
-
+# Hacer un diccionario que guarde datos de 5 personas diferentes
+# cada "tipo" de dato deberá ser almacenado en listas, y éstas, estarán dentro del diccionario
 lista_nombres = []
 lista_edades = []
 lista_hermanos = []
 lista_ciudades = []
 lista_colores = []
 
-for i in range(2):
+for i in range(5):
     nombre = input("¿Cuál es tu nombre? ")
     edad = int(input("¿Cuántos años tienes? "))
     hermanos = int(input("¿Cuántos hermanos tienes? "))
@@ -80,7 +81,7 @@ print(personas["edad"][1])
 # otra manera
 personas = {"nombre": [], "edad": [], "hermanos": [], "ciudad": [], "color": []}
 
-for i in range(2):
+for i in range(5):
     nombre = input("¿Cuál es tu nombre? ")
     edad = int(input("¿Cuántos años tienes? "))
     hermanos = int(input("¿Cuántos hermanos tienes? "))
@@ -98,7 +99,7 @@ print(personas)
 # otra manera
 personas = {"nombre": [], "edad": [], "hermanos": [], "ciudad": [], "color": []}
 
-for i in range(2):
+for i in range(5):
     personas["nombre"].append(input("¿Cuál es tu nombre? "))
     personas["edad"].append(int(input("¿Cuántos años tienes? ")))
     personas["hermanos"].append(int(input("¿Cuántos hermanos tienes? ")))
@@ -106,3 +107,17 @@ for i in range(2):
     personas["color"].append(input("Cuál es tu color favorito? "))
 
 print(personas)
+'''
+#################################################################################
+
+ordenadores = {"procesador": ["intel i7 7th Generación","intel i5 7th Generación"],
+                "RAM": [24, 32], "GPU": ["NVIDIA GEFORCE GTX 950M","NULL"],
+                "HD": [1000,500], "SSD": [128,256]}
+
+
+claves = ordenadores.keys()
+print(claves)
+print(type(claves))
+
+valores = ordenadores.values()
+print(valores)
