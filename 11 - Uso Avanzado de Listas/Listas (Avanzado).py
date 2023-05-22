@@ -137,7 +137,7 @@ print(numeros)
 numeros.sort(reverse=True)
 print(numeros)
 
-# comando .index(x)
+# comando .index(x)  -> devuelve el indice (posición) del elemento "x" en la lista
 numeros = [3,5,4,2,1]
 num = 5
 cantidad = numeros.count(num)
@@ -148,11 +148,12 @@ else:
     print(f"El número {num} no está en la lista")
 
 
+# slicing - coge un trozo de la liste en un intervalo determinado
 numeros = [3,5,4,2,1,9,8,7,1,3,0,5,8,7]
-nums = numeros[0:7]
+nums = numeros[0:7]  #[inicio: fin] -> coge los elementos entre el indice 0 (incluido) y el 7 (no incluido) --> [3,5,4,2,1,9,8]
 print(nums)
 
-nums = numeros[5:9]
+nums = numeros[5:9]  #[inicio: fin] -> coge los elementos entre el indice 5 (incluido) y el 9 (no incluido) --> [9,8,7,1]
 print(nums)
 
 
